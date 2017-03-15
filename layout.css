@@ -4,12 +4,10 @@
 }
 .name-header{
   border: 2px solid red;
-  width:50%;
+  width: 45%;
   float: left;
-  margin-left: 50px;
   padding: .5em;
 }
-
 
 .about-container{
   border: 2px solid black;
@@ -25,6 +23,7 @@
   float: right;
   clear: right;
   text-align: right;
+  font-size: 1.2em;
 }
 
 .nav-menu li{
