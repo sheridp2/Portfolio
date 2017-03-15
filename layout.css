@@ -3,7 +3,6 @@
 
 }
 .name-header{
-  border: 2px solid red;
   width: 45%;
   float: left;
   padding: .5em;
@@ -20,6 +19,7 @@
   margin-top: .6em;
 }
 .nav-menu{
+  margin-right: .2em;
   float: right;
   clear: right;
   text-align: right;
