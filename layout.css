@@ -1,0 +1,31 @@
+.main-header{
+  border: 2px solid black;
+}
+
+.about-container{
+  border: 2px solid black;
+  margin-top: 10px;
+
+}
+
+.nav-menu{
+  /*border: 2px solid black;*/
+
+}
+
+.nav-menu li{
+  display: inline;
+}
+
+.projects-container{
+  border: 2px solid black;
+}
+
+.skills-container{
+  border: 2px solid black;
+}
+
+.skills-container li{
+  text-align: left;
+  list-style: none;
+}
