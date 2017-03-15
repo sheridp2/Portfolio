@@ -1,0 +1,23 @@
+.nav-list ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu:hover ul {
+  display: block;
+}
+
+@media only screen and (min-width: 640px){
+  .hamburger{
+    display: none;
+  }
+
+  .nav-list ul{
+    display: block;
+  }
+   .nav-list ul li{
+     display: inline;
+     float: none;
+   }
+}
