@@ -1,20 +1,38 @@
 .main-header{
   border: 2px solid black;
+
 }
+.name-header{
+  border: 2px solid red;
+  width:50%;
+  float: left;
+  margin-left: 50px;
+  padding: .5em;
+}
+
 
 .about-container{
   border: 2px solid black;
   margin-top: 10px;
+  clear:both;
 
 }
-
+.hamburger{
+  float: right;
+  margin-top: .6em;
+}
 .nav-menu{
-  /*border: 2px solid black;*/
-
+  float: right;
+  clear: right;
+  text-align: right;
 }
 
 .nav-menu li{
-  display: inline;
+  list-style-type: none;
+}
+
+.skills-container li{
+  text-align: left;
 }
 
 .projects-container{
@@ -29,3 +47,7 @@
   text-align: left;
   list-style: none;
 }
+ .hamburger{
+   width:30px;
+   height:28px;
+ }
