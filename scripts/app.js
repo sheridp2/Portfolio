@@ -5,5 +5,3 @@ function Project (projectsData){
   this.image = projectsData.image;
   this.projectUrl = projectsData.projectUrl;
 }
-var projectOne = new Project(projectsInfo[0]);
-console.log(projectOne);
