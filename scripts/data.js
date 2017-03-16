@@ -3,7 +3,7 @@
 var projectsInfo = [
   {
     title:  'GitFit',
-    image: 'Images/GetFit.jpg',
+    image: 'Images/GetFit.png',
     projectUrl: 'https://aesthetiques.github.io/swole_devs/'
   },
   {
