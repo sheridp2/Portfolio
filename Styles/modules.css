@@ -8,6 +8,10 @@
   display: block;
 }
 
+/*.projectBox{
+  display: none;
+}*/
+
 @media only screen and (min-width: 640px){
   .hamburger{
     display: none;
@@ -19,6 +23,6 @@
    .nav-list ul li{
      display: inline;
      float: none;
-    
+
    }
 }

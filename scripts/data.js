@@ -3,17 +3,17 @@
 var projectsInfo = [
   {
     title:  'GitFit',
-    image: 'Images/GetFit.jpg',
+    image: 'Images/GetFit.png',
     projectUrl: 'https://aesthetiques.github.io/swole_devs/'
   },
   {
     title:  'Bus Mall',
     image: 'Images/nature.jpg',
-    projectUrl: 'https://aesthetiques.github.io/swole_devs/'
+    projectUrl: 'https://sheridp2.github.io/Bus-Mall/'
   },
   {
     title:  'Salmon Cookies',
     image: 'Images/doggo.jpg',
-    projectUrl: 'https://aesthetiques.github.io/swole_devs/'
+    projectUrl: 'https://sheridp2.github.io/Salmon-Cookies/'
   }
 ];
