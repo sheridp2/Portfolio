@@ -8,12 +8,12 @@ var projectsInfo = [
   },
   {
     title:  'Bus Mall',
-    image: 'Images/nature.jpg',
+    image: 'Images/busmall.png',
     projectUrl: 'https://sheridp2.github.io/Bus-Mall/'
   },
   {
     title:  'Salmon Cookies',
-    image: 'Images/doggo.jpg',
+    image: 'Images/salmon.png',
     projectUrl: 'https://sheridp2.github.io/Salmon-Cookies/'
   }
 ];
