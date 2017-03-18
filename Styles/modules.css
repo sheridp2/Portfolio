@@ -20,6 +20,13 @@
      display: inline;
      float: none;
      font-size: 1.1em;
-
    }
+
+  #projectsContainer{
+    display: block;
+  }
+
+.projectsBox {
+  display: inline-block;;
+  }
 }
