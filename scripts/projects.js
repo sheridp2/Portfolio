@@ -4,6 +4,9 @@ var allProjects = [];
 
 var allBlogs = [];
 
+$('.tab-content').hide();
+$('#about-me').show();
+
 function Project (projectsData){
   this.title = projectsData.title;
   this.image = projectsData.image;
@@ -49,3 +52,18 @@ blogPosts.forEach(function(blogObject) {
 allBlogs.forEach(function(a){
   $('#blog-container').append(a.toHtml());
 })
+
+blogPosts.handelBlogCreate = function() {
+  var newBlog;
+
+  $('#blogSubmit').click(function(){
+    newBlog = new BlogPosts ({
+      title: $('#blog-title').val(),
+      author: $('#blog-author').val(),
+      body: $('#blog-body').val()
+    });
+    (blogPosts).push(newBlog);
+  })
+};
+
+blogPosts.handelBlogCreate();

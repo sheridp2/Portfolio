@@ -1,6 +1,6 @@
+'use strict';
 var portfolioView = {};
-
-$('#projects-container').hide();
+var blogView = {};
 
 portfolioView.handelhandleMainNav = function () {
   $('.nav-list').on('click', '.tab', function(){
@@ -9,5 +9,6 @@ portfolioView.handelhandleMainNav = function () {
     $('#' + $(this).data('content')).fadeIn();
   })
 };
+
 
 portfolioView.handelhandleMainNav();
