@@ -21,4 +21,12 @@
      float: none;
 
    }
+
+  #projects-container{
+    display: block;
+  }
+
+.projectsBox {
+  display: inline-block;;
+  }
 }

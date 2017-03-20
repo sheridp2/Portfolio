@@ -6,12 +6,15 @@
   width: 45%;
   float: left;
   padding: .5em;
+  min-width: 5em;
 }
 
 .about-container{
   border: 2px solid black;
   margin-top: 10px;
   clear:both;
+  padding-left: 1em;
+  min-width: 16em;
 }
 
 .me-pic {
@@ -40,18 +43,19 @@
   text-align: left;
 }
 
-#projectsContainer{
+#projectsCSontainer{
   /*border: 2px solid black;*/
   padding-top: 20em;
 }
 
 .skills-container{
+  min-width: 16em;
   border: 2px solid black;
+  padding-left: 1em;
 }
 
 .skills-container li{
   text-align: left;
-  list-style: none;
 }
  .hamburger{
    width:30px;

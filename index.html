@@ -53,15 +53,18 @@
 
     <section id="projectsContainer" class="tab-content">
       <h2>Projects</h2>
-      <article class="projectBox">
-        <h3></h3>
-          <a href=""></a>
-          <a href=""><img src=""></a>
-        </div>
-      </article>
     </section>
 
+    <script id="articles-template" type="text/x-handlebars-template">
+        <article id="project-box" class="projectBox">
+          <h3>{{title}}</h3>
+            <a target="_blank" href="{{projectUrl}}"><img src="{{image}}"></a>
+          </div>
+        </article>
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
     <script type="text/javascript" src="scripts/projects.js"></script>
     <script type="text/javascript" src="scripts/portfolioView.js"></script>
