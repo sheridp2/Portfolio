@@ -42,16 +42,10 @@ BlogPosts.prototype.toHtml = function(){
 
   var templateRender = Handlebars.compile(source);
 
+  // console.log('this',this);
   return templateRender(this);
 }
 
-blogPosts.forEach(function(blogObject) {
-  allBlogs.push(new BlogPosts(blogObject));
-});
-
-allBlogs.forEach(function(a){
-  $('#blog-container').append(a.toHtml());
-})
 
 blogPosts.handelBlogCreate = function() {
   var newBlog;
@@ -62,8 +56,16 @@ blogPosts.handelBlogCreate = function() {
       author: $('#blog-author').val(),
       body: $('#blog-body').val()
     });
-    (blogPosts).push(newBlog);
+
+    blogPosts.push(newBlog);
+    console.log(blogPosts);
+
   })
+  blogPosts.forEach(function(blog){
+    blog = new BlogPosts(blog)
+    $('#blog-container').append(blog.toHtml())
+    // console.log(blog);
+    })
 };
 
 blogPosts.handelBlogCreate();
