@@ -46,7 +46,6 @@ BlogPosts.prototype.toHtml = function(){
   return templateRender(this);
 }
 
-
 blogPosts.handelBlogCreate = function() {
   var newBlog;
 
@@ -58,14 +57,13 @@ blogPosts.handelBlogCreate = function() {
     });
 
     blogPosts.push(newBlog);
-    console.log(blogPosts);
+    $('article').remove();
+    blogPosts.forEach(function(blog){
+      blog = new BlogPosts(blog)
 
-  })
-  blogPosts.forEach(function(blog){
-    blog = new BlogPosts(blog)
-    $('#blog-container').append(blog.toHtml())
-    // console.log(blog);
+      $('#blog-container').append(blog.toHtml())
     })
+  })
 };
 
 blogPosts.handelBlogCreate();
