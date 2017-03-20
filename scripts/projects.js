@@ -49,17 +49,18 @@ BlogPosts.prototype.toHtml = function(){
 blogPosts.handelBlogCreate = function() {
   var newBlog;
 
-  $('#blogSubmit').click(function(){
+  $('#blog-submit').click(function(){
     newBlog = new BlogPosts ({
       title: $('#blog-title').val(),
       author: $('#blog-author').val(),
       body: $('#blog-body').val()
     });
+    $('#blog-container > article').remove();
 
     blogPosts.push(newBlog);
-    $('article').remove();
     blogPosts.forEach(function(blog){
       blog = new BlogPosts(blog)
+
 
       $('#blog-container').append(blog.toHtml())
     })
