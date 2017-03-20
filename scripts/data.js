@@ -17,3 +17,11 @@ var projectsInfo = [
     projectUrl: 'https://sheridp2.github.io/Salmon-Cookies/'
   }
 ];
+
+var blogPosts = [
+  {
+    title: 'Welcome',
+    author: 'Patrick Sheridan',
+    body: 'Here is where I write stuff'
+  }
+]
