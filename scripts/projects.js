@@ -23,5 +23,5 @@ projectsInfo.forEach(function(projectObject) {
 console.log('after push', allProjects);
 
 allProjects.forEach(function(a){
-  $('#projectsContainer').append(a.toHtml());
+  $('#projects-container').append(a.toHtml());
 });

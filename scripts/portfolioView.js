@@ -1,6 +1,6 @@
 var portfolioView = {};
 
-$('#projectsContainer').hide();
+$('#projects-container').hide();
 
 portfolioView.handelhandleMainNav = function () {
   $('.nav-list').on('click', '.tab', function(){
