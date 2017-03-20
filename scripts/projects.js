@@ -9,13 +9,11 @@ function Project (projectsData){
 }
 
 Project.prototype.toHtml = function(){
-  var $newProject = $('article.projectBox').clone().removeClass('projectBox');
+  var source = $('#articles-template').html();
 
-  $newProject.find('h3').html(this.title);
-  $newProject.find('img').attr('src', this.image);
-  $newProject.find('a').attr('href', this.projectUrl);
+  var templateRender = Handlebars.compile(source);
 
-  return $newProject;
+  return templateRender(this);
 }
 
 projectsInfo.forEach(function(projectObject) {
@@ -25,5 +23,5 @@ projectsInfo.forEach(function(projectObject) {
 console.log('after push', allProjects);
 
 allProjects.forEach(function(a){
-  $('#projectsContainer').append(a.toHtml());
+  $('#projects-container').append(a.toHtml());
 });

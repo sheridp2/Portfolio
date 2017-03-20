@@ -20,8 +20,8 @@
         <button class="hamburger">&#9776;</button>
         <div class="nav-list">
           <ul>
-            <li class="tab" data-content="aboutMe"><a href="#">About</a></li>
-            <li class="tab" data-content="projectsContainer"><a href="#">Projects</a></li>
+            <li class="tab" data-content="about-me"><a href="#">About</a></li>
+            <li class="tab" data-content="projects-container"><a href="#">Projects</a></li>
             <li><a href="https://github.com/sheridp2" target="_blank">GitHub</a></li>
             <li><a href="https://www.facebook.com/patrick.sheridan.773?ref=bookmarks" target="_blank">Facebook</a></li>
           <ul>
@@ -29,7 +29,7 @@
       </nav>
 
     </header>
-    <section id="aboutMe" class="tab-content">
+    <section id="about-me" class="tab-content">
       <div class="about-container">
         <div class="about-text">
           <h2>About Me</h2>
@@ -51,17 +51,20 @@
       </div>
     </section>
 
-    <section id="projectsContainer" class="tab-content">
+    <section id="projects-container" class="tab-content">
       <h2>Projects</h2>
-      <article class="projectBox">
-        <h3></h3>
-          <a href="" ></a>
-          <a target="_blank" href=""><img src=""></a>
-        </div>
-      </article>
     </section>
 
+    <script id="articles-template" type="text/x-handlebars-template">
+        <article id="project-box" class="projectBox">
+          <h3>{{title}}</h3>
+            <a target="_blank" href="{{projectUrl}}"><img src="{{image}}"></a>
+          </div>
+        </article>
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
     <script type="text/javascript" src="scripts/projects.js"></script>
     <script type="text/javascript" src="scripts/portfolioView.js"></script>
