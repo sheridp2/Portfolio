@@ -42,27 +42,28 @@ BlogPosts.prototype.toHtml = function(){
 
   var templateRender = Handlebars.compile(source);
 
+  // console.log('this',this);
   return templateRender(this);
 }
-
-blogPosts.forEach(function(blogObject) {
-  allBlogs.push(new BlogPosts(blogObject));
-});
-
-allBlogs.forEach(function(a){
-  $('#blog-container').append(a.toHtml());
-})
 
 blogPosts.handelBlogCreate = function() {
   var newBlog;
 
-  $('#blogSubmit').click(function(){
+  $('#blog-submit').click(function(){
     newBlog = new BlogPosts ({
       title: $('#blog-title').val(),
       author: $('#blog-author').val(),
       body: $('#blog-body').val()
     });
-    (blogPosts).push(newBlog);
+    $('#blog-container > article').remove();
+
+    blogPosts.push(newBlog);
+    blogPosts.forEach(function(blog){
+      blog = new BlogPosts(blog)
+
+
+      $('#blog-container').append(blog.toHtml())
+    })
   })
 };
 
