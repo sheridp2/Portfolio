@@ -2,8 +2,6 @@
 
 var allProjects = [];
 
-var allBlogs = [];
-
 $('.tab-content').hide();
 $('#about-me').show();
 
@@ -11,7 +9,7 @@ function Project (projectsData){
   this.title = projectsData.title;
   this.image = projectsData.image;
   this.projectUrl = projectsData.projectUrl;
-}
+};
 
 Project.prototype.toHtml = function(){
   var source = $('#articles-template').html();
@@ -21,14 +19,20 @@ Project.prototype.toHtml = function(){
   return templateRender(this);
 }
 
-projectsInfo.forEach(function(projectObject) {
-  allProjects.push(new Project(projectObject));
-});
+function handelShowProjects(){
+  $.getJSON('/Data/projectsData.json')
+  .then(function(data){
+    data.forEach(function(projectsData){
+      allProjects.push(new Project(projectsData));
+    })
+    allProjects.forEach(function(a){
+      $('#projects-container').append(a.toHtml());
+    });
+  }, function(err) {
+  });
+}
 
-allProjects.forEach(function(a){
-  $('#projects-container').append(a.toHtml());
-});
-
+handelShowProjects();
 
 //blog post constructor
 function BlogPosts (blogData){
@@ -42,7 +46,6 @@ BlogPosts.prototype.toHtml = function(){
 
   var templateRender = Handlebars.compile(source);
 
-  // console.log('this',this);
   return templateRender(this);
 }
 
