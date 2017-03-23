@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Patrick Sheridan Web Dev portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheridp2/Portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Patrick Sheridan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sheridp2/Portfolio/issues"
+  },
+  "homepage": "https://github.com/sheridp2/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
