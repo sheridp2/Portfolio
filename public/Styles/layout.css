@@ -3,10 +3,11 @@
 
 }
 .name-header{
-  width: 45%;
+  width:30%;
   float: left;
   padding: .5em;
-  min-width: 5em;
+  min-width: 12em;
+  background-color: rgba(255,255,255, 0.50);
 }
 
 .about-container{
@@ -15,8 +16,7 @@
   clear:both;
   padding-left: 1em;
   min-width: 16em;
-  background-color: rgba(255,255,255, 0.3);
-
+  background-color: rgba(255,255,255, 0.50);
 
 }
 
@@ -40,21 +40,30 @@
 
 .nav-menu li{
   list-style-type: none;
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  padding: .2em;
+  font-size: 1em;
+
 }
 
 .skills-container li{
   text-align: left;
+
 }
 
 #blog-container{
   padding-top: 18em;
   margin-left: 1em;
+
 }
 
 #projects-container{
   /*border: 2px solid black;*/
   padding-top: 20em;
   text-align: center;
+
 }
 
 
@@ -62,6 +71,8 @@
   min-width: 16em;
   border: 2px solid black;
   padding-left: 1em;
+  background-color: rgba(255,255,255, 0.50);
+
 }
 
 .skills-container li{
