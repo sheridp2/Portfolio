@@ -18,6 +18,8 @@ var projectsInfo = [
   }
 ];
 
+
+//Shouldn't be the same name as the Constructor, consider putting in another .json in the Data folder.
 var blogPosts = [
   {
     title: 'Welcome',
