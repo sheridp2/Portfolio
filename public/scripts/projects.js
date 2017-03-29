@@ -2,7 +2,7 @@
 
 (function(module) {
 
-  var allProjects = [];
+  let allProjects = [];
 
   $('.tab-content').hide();
   $('#about-me').show();
@@ -14,9 +14,9 @@
   }
 
   Project.prototype.toHtml = function(){
-    var source = $('#articles-template').html();
+    let source = $('#articles-template').html();
 
-    var templateRender = Handlebars.compile(source);
+    let templateRender = Handlebars.compile(source);
 
     return templateRender(this);
   }

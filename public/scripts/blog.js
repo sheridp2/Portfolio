@@ -9,15 +9,15 @@
   }
 
   BlogPosts.prototype.toHtml = function(){
-    var source = $('#blog-template').html();
+    let source = $('#blog-template').html();
 
-    var templateRender = Handlebars.compile(source);
+    let templateRender = Handlebars.compile(source);
 
     return templateRender(this);
   }
 
   allBlogPosts.handelBlogCreate = function() {
-    var newBlog;
+    let newBlog;
 
     $('#blog-submit').click(function(){
       newBlog = new BlogPosts ({
@@ -31,12 +31,11 @@
       allBlogPosts.forEach(function(blog){
         blog = new BlogPosts(blog)
 
-
         $('#blog-container').append(blog.toHtml())
       })
     })
   };
 
   allBlogPosts.handelBlogCreate();
-  module.BlogPosts = BlogPosts
+  module.BlogPosts = BlogPosts;
 })(window);
