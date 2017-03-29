@@ -32,8 +32,16 @@
         blog = new BlogPosts(blog)
 
         $('#blog-container').append(blog.toHtml())
+        BlogPosts.numWords();
+        console.log(BlogPosts.numWords());
       })
     })
+  };
+
+  BlogPosts.numWords = () => {
+    return allBlogPosts.map(function(blog){
+      return blog.body.split(' ').length;
+    }).reduce((acc, val) => acc + val)
   };
 
   allBlogPosts.handelBlogCreate();
