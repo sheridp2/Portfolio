@@ -16,7 +16,7 @@ client.on('error', function(error) {
   console.error(error);
 });
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('/public'));
+app.use(express.static('./public'));
 
 app.get('*', function(request, response){
   response.sendFile('index.html', {root:'.'})
