@@ -31,7 +31,6 @@ function loadProjects() {
 
 }
 
-
 function loadDB(){
   client.query(`
     CREATE TABLE IF NOT EXISTS
