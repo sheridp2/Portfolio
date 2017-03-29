@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="Styles/icon.css">
     <link rel="stylesheet" href="Styles/modules.css">
     <title>Patrick Sheridan Portfolio Home</title>
+
+    <!-- Handlebars templates -->
+    <script id="articles-template" type="text/x-handlebars-template">
+      <article id="project-box" class="projectBox">
+        <h3>{{title}}</h3>
+        <a target="_blank" href="{{projectUrl}}"><img src="{{image}}"></a>
+      </div>
+    </article>
+  </script>
+
+  <script id="blog-template" type="text/x-handlebars-template">
+    <article>
+      <h3>{{title}}</h3>
+      <p>By {{author}}</p>
+      <section class "blog-body">{{{body}}}</section>
+    </article>
+  </script>
   </head>
   <body>
     <header class="main-header">
@@ -57,21 +74,6 @@
       <h2>Projects</h2>
     </section>
 
-    <script id="articles-template" type="text/x-handlebars-template">
-        <article id="project-box" class="projectBox">
-          <h3>{{title}}</h3>
-            <a target="_blank" href="{{projectUrl}}"><img src="{{image}}"></a>
-          </div>
-        </article>
-    </script>
-
-    <script id="blog-template" type="text/x-handlebars-template">
-      <article>
-        <h3>{{title}}</h3>
-        <p>By {{author}}</p>
-        <section class "blog-body">{{{body}}}</section>
-      </article>
-    </script>
 
     <section id="blog-container" class="tab-content">
       <h2>Blog</h2>

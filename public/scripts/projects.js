@@ -23,6 +23,7 @@ function handelShowProjects(){
   $.getJSON('/Data/projectsData.json')
   .then(function(data){
     data.forEach(function(projectsData){
+      //This could be a map!
       allProjects.push(new Project(projectsData));
     })
     allProjects.forEach(function(a){
@@ -33,6 +34,8 @@ function handelShowProjects(){
 }
 
 handelShowProjects();
+
+// Maybe put on a seperate JS?
 
 //blog post constructor
 function BlogPosts (blogData){
@@ -59,7 +62,7 @@ blogPosts.handelBlogCreate = function() {
       body: $('#blog-body').val()
     });
     $('#blog-container > article').remove();
-
+    //This could also be a map
     blogPosts.push(newBlog);
     blogPosts.forEach(function(blog){
       blog = new BlogPosts(blog)
