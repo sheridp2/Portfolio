@@ -9,14 +9,14 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-const conString = 'postgres://postgres:1234@localhost:5432/kilovolt';
+const conString = 'postgres://patrick:test@localhost:5432/kilovolt';
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', function(error) {
   console.error(error);
 });
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('./public'));
+app.use(express.static('/public'));
 
 app.get('*', function(request, response){
   response.sendFile('index.html', {root:'.'})
