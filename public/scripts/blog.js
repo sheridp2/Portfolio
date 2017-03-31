@@ -26,7 +26,6 @@
         body: $('#blog-body').val()
       });
       $('#blog-container > article').remove();
-      //This could also be a map
       allBlogPosts.push(newBlog);
       allBlogPosts.forEach(function(blog){
         blog = new BlogPosts(blog)
