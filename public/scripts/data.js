@@ -1,26 +1,5 @@
 'use strict';
-
-var projectsInfo = [
-  {
-    title:  'GitFit',
-    image: 'Images/GetFit.png',
-    projectUrl: 'https://aesthetiques.github.io/swole_devs/'
-  },
-  {
-    title:  'Bus Mall',
-    image: 'Images/busmall.png',
-    projectUrl: 'https://sheridp2.github.io/Bus-Mall/'
-  },
-  {
-    title:  'Salmon Cookies',
-    image: 'Images/salmon.png',
-    projectUrl: 'https://sheridp2.github.io/Salmon-Cookies/'
-  }
-];
-
-
-//Shouldn't be the same name as the Constructor, consider putting in another .json in the Data folder.
-var blogPosts = [
+const allBlogPosts = [
   {
     title: 'Welcome',
     author: 'Patrick Sheridan',
@@ -30,5 +9,28 @@ var blogPosts = [
     title: 'Is it working?',
     author: 'Paul',
     body: 'I cant tell'
+  }
+]
+
+const allSkills = [
+  {
+    skill: 'Javascript',
+    category: 'Professional'
+  },
+  {
+    skill: 'Environmental Science',
+    category: 'Professional'
+  },
+  {
+    skill: 'Tour Guide',
+    category: 'Professional'
+  },
+  {
+    skill: 'Boxing',
+    category: 'Personal'
+  },
+  {
+    skill: 'Cooking',
+    category: 'Personal'
   }
 ]
