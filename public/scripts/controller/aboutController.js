@@ -7,6 +7,9 @@
   aboutController.init = function () {
     $('.tab-content').hide()
     $('#about-me').fadeIn();
+
+    repos.requestRepos(repoView.index);
+
   };
 
   module.aboutController = aboutController;

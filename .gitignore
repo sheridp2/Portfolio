@@ -1,24 +1,3 @@
-# Created by https://www.gitignore.io/api/osx,linux,node,vim
-
-### OSX ###
-.DS_Store
-.AppleDouble
-.LSOverride
-
-### Linux ###
-*~
-
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-
-### Node ###
 # Logs
 logs
 *.log
@@ -35,6 +14,12 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
 # node-waf configuration
 .lock-wscript
 
@@ -50,16 +35,3 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
-
-### Vim ###
-# swap
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-# session
-Session.vim
-# temporary
-.netrwhist
-*~
-
-# auto-generated tag files
-tags

@@ -21,8 +21,9 @@
   },
   "homepage": "https://github.com/sheridp2/Portfolio#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.15.2",
-    "pg": "^6.1.2",
-    "body-parser": "^1.15.2"
+    "express-request-proxy": "^2.0.0",
+    "pg": "^6.1.2"
   }
 }
