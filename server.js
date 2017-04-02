@@ -4,6 +4,7 @@ const pg = require('pg');
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
+const requestProxy = require('express-request-proxy');
 
 const PORT = process.env.PORT || 3000;
 
@@ -15,8 +16,23 @@ client.connect();
 client.on('error', function(error) {
   console.error(error);
 });
+
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
+
+app.get('/github/*', proxyGitHub)
+
+function proxyGitHub(req, res){
+  console.log('Routing a request fot a github resource');
+  (requestProxy({
+    url: `https://api.github.com/${req.params[0]}`,
+    headers: {
+      Authorization: `token ${process.env.GITHUB_TOKEN}`
+    }
+  }))(req, res)
+}
+
 
 app.get('*', function(request, response){
   response.sendFile('index.html', {root:'.'})
