@@ -24,7 +24,7 @@ app.use(express.static('./public'));
 app.get('/github/*', proxyGitHub)
 
 function proxyGitHub(req, res){
-  console.log('Routing a request fot a github resource');
+  console.log('Routing a request for a github resource');
   (requestProxy({
     url: `https://api.github.com/${req.params[0]}`,
     headers: {
