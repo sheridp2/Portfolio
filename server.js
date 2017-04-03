@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-const conString = 'postgres://patrick:test@localhost:5432/kilovolt';
+const conString = process.env.HEROKU_POSTGRESQL_RED_URL || 'postgres://patrick:test@localhost:5432/kilovolt';
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', function(error) {
@@ -24,7 +24,7 @@ app.use(express.static('./public'));
 app.get('/github/*', proxyGitHub)
 
 function proxyGitHub(req, res){
-  console.log('Routing a request fot a github resource');
+  console.log('Routing a request for a github resource');
   (requestProxy({
     url: `https://api.github.com/${req.params[0]}`,
     headers: {
